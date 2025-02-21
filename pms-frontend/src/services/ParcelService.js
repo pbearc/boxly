@@ -16,3 +16,11 @@ export const updateParcel = (parcelId, parcel) =>
 
 export const deleteParcel = (parcelId) =>
   axios.delete(`${PARCEL_API_BASE_URL}/${parcelId}`);
+
+export const parseParcelInfo = (imageFormData) => {
+  return axios.post("http://localhost:8080/api/ocr/parse", imageFormData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+};
