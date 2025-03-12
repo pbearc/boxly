@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const UNIT_API_BASE_URL = "http://localhost:8080/api/units";
+const UNIT_API_BASE_URL = "http://localhost:8051/api/units";
 
 export const getUnits = () => axios.get(UNIT_API_BASE_URL);
 

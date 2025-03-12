@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const PARCEL_API_BASE_URL = "http://localhost:8080/api/parcels";
+const PARCEL_API_BASE_URL = "http://localhost:8051/api/parcels";
 
 export const getParcels = () => axios.get(PARCEL_API_BASE_URL);
 
@@ -18,7 +18,7 @@ export const deleteParcel = (parcelId) =>
   axios.delete(`${PARCEL_API_BASE_URL}/${parcelId}`);
 
 export const parseParcelInfo = (imageFormData) => {
-  return axios.post("http://localhost:8080/api/ocr/parse", imageFormData, {
+  return axios.post("http://localhost:8051/api/ocr/parse", imageFormData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
